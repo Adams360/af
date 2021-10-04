@@ -1,4 +1,20 @@
 /* Color Scheme */
+/* Gilroy Font Family */
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 700;
+  src: url("../assets/fonts/Gilroy-Bold.woff2") format("woff2"), url("../assets/fonts/Gilroy-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 600;
+  src: url("../assets/fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../assets/fonts/Gilroy-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 400;
+  src: url("../assets/fonts/Gilroy-Regular.woff2") format("woff2"), url("../assets/fonts/Gilroy-Regular.woff") format("woff");
+}
 /* Buttons */
 .btn {
   display: inline-block;
@@ -15,7 +31,7 @@
   font-size: 1rem;
 }
 .btn--cta {
-  background-color: #fff;
+  background-color: #E5E6EC;
   color: #00C2FF;
   border-radius: 8px;
   padding: 1.3rem 1.5rem;
@@ -24,7 +40,7 @@
 .btn--link {
   position: relative;
   background-color: transparent;
-  color: #fff;
+  color: #E5E6EC;
   line-height: 1.8;
 }
 .btn--link::before, .btn--link::after {
@@ -72,7 +88,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Gilroy", sans-serif;
 }
 
 .container {
@@ -93,7 +109,6 @@ ul a {
 .hero {
   position: relative;
   z-index: 1;
-  padding: 3rem 0;
 }
 .hero::after {
   content: "";
@@ -108,13 +123,20 @@ ul a {
   background-repeat: no-repeat;
   z-index: -1;
 }
+.hero__logo {
+  display: block;
+  max-width: 127px;
+  padding: 20px 0;
+}
 .hero__inner {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 6rem 0;
 }
 .hero__content {
-  flex: 1;
-  color: #fff;
+  flex: 0 0 605px;
+  color: #ffffff;
 }
 .hero__content h1 {
   font-size: 56px;
@@ -135,7 +157,7 @@ ul a {
   margin: 0 48px 0 0;
 }
 .hero__img {
-  flex: 1;
+  flex: 0 0 728.5px;
 }
 .hero__img img {
   display: block;
@@ -184,8 +206,9 @@ ul a {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 4rem;
   box-shadow: 0px 50px 90px -16px rgba(25, 20, 51, 0.1);
+  background-color: #ffffff;
   border-radius: 8px;
   display: flex;
   flex-wrap: wrap;
@@ -201,11 +224,47 @@ ul a {
   top: 50%;
   transform: translateY(-50%);
 }
+.contact .form__group:last-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+.contact .form__group:last-child input[type=submit] {
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 8px;
+  background-color: #220D4E;
+  color: #ffffff;
+  padding: 1rem;
+}
+.contact .form__group--select::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/select-arrow.svg);
+}
 .contact .form__control {
+  display: block;
   box-shadow: 0px 1px 2px rgba(0, 51, 99, 0.08);
   border-radius: 8px;
-  padding: 5px;
   width: 100%;
+  padding: 1rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #E5E6EC;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

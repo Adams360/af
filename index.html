@@ -16,6 +16,12 @@
     <!-- Hero -->
     <header class="hero">
         <div class="container">
+
+            <a href="#" class="hero__logo">
+                <img src="./assets/img/af-logo.svg" alt="">
+            </a>
+
+
             <div class="hero__inner">
                 <div class="hero__content">
                     <h1>Measure every action with confidence</h1>
@@ -107,8 +113,8 @@
                     <input type="text" class="form__control" id="company_name" name="company_name">
                     <label for="company_name">Company name</label>
                 </div>
-                <div class="form__group form__group--full">
-                    <select class="form__control form__control--select" id="company_type" name="company_type">
+                <div class="form__group form__group--select">
+                    <select class="form__control" id="company_type" name="company_type">
                         <option value="company_type1"></option>
                         <option value="company_type2">Company Type 2</option>
                         <option value="company_type3">Company Type 3</option>
@@ -117,6 +123,11 @@
                     </select>
                     <label for="company_type">My company is*</label>
                 </div>
+
+                <div class="form__group">
+                    <input type="submit" class="btn" value="Submit">
+                </div>
+
             </form>
 
         </div>

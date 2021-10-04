@@ -2,7 +2,6 @@
 .hero {
     position: relative;
     z-index: 1;
-    padding: 3rem 0;
 
     &::after {
         content: "";
@@ -18,14 +17,22 @@
         z-index: -1;
     }
 
+    &__logo {
+        display: block;
+        max-width: 127px;
+        padding: 20px 0;
+    }
+
     &__inner {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 6rem 0;
     }
 
     &__content {
-        flex: 1;
-        color: $brand-light;
+        flex: 0 0 605px;
+        color: $brand-white;
 
         h1 {
             font-size: 56px;
@@ -52,7 +59,7 @@
     }
 
     &__img {
-        flex: 1;
+        flex: 0 0 728.5px;
         img {
             display: block;
             width: 728.5px;
@@ -107,9 +114,10 @@
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 4rem;
 
         box-shadow: 0px 50px 90px -16px rgba(25, 20, 51, 0.1);
+        background-color: $brand-white;
         border-radius: 8px;
 
         display: flex;
@@ -126,12 +134,55 @@
                 top: 50%;
                 transform: translateY(-50%);
             }
+
+            &:last-child {
+                flex-basis: 100%;
+                text-align: center;
+
+                input[type="submit"] {
+                    font-size: 16px;
+                    font-weight: 400;
+                    border-radius: 8px;
+                    background-color: $brand-200;
+                    color: $brand-white;
+                    padding: 1rem;
+                }
+            }
+
+            &--select {
+                &::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-image: url(../assets/img/select-arrow.svg);
+                }
+            }
         }
         &__control {
+            display: block;
             box-shadow: 0px 1px 2px rgba(0, 51, 99, 0.08);
             border-radius: 8px;
-            padding: 5px;
+
             width: 100%;
+            padding: 1rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1;
+            color: $brand-light;
+            background-color: $brand-white;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
         }
     }
 }
