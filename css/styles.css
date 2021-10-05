@@ -97,7 +97,7 @@ body {
   width: 100%;
   max-width: 1536px;
   margin: 0 auto;
-  padding: 0 38px;
+  padding: 0 22px;
 }
 
 ul {
@@ -135,6 +135,11 @@ ul a {
   max-width: 127px;
   padding: 20px 0;
 }
+@media only screen and (max-width: 992px) {
+  .hero__logo {
+    padding: 20px 0 3rem;
+  }
+}
 .hero__inner {
   display: flex;
   justify-content: space-between;
@@ -143,7 +148,7 @@ ul a {
 @media only screen and (max-width: 992px) {
   .hero__inner {
     flex-direction: column-reverse;
-    padding: 2rem 0;
+    padding: 0 0 7rem;
   }
 }
 .hero__content {
@@ -154,7 +159,7 @@ ul a {
   .hero__content {
     flex-basis: 100%;
     text-align: center;
-    margin: 2rem 0;
+    margin: 2rem 0 0;
   }
 }
 .hero__content h1 {
@@ -162,6 +167,11 @@ ul a {
   font-weight: 700;
   line-height: clamp(40px, 2vw, 60px);
   margin: 0 0 37.5px;
+}
+@media only screen and (max-width: 992px) {
+  .hero__content h1 {
+    margin: 0 0 20px;
+  }
 }
 .hero__content p {
   font-size: 20px;
@@ -207,16 +217,23 @@ ul a {
 
 /* Features */
 .features {
-  padding: 100px 0;
+  padding: 6rem 0;
 }
 @media only screen and (max-width: 992px) {
   .features {
-    padding: 30px 0;
+    padding: 6rem 0 3rem;
   }
+}
+.features h2 {
+  font-size: clamp(34px, 2vw, 40px);
+  line-height: clamp(42px, 2vw, 48px);
+  font-weight: 700;
+  text-align: center;
 }
 .features__inner {
   display: flex;
   justify-content: space-between;
+  margin: 4rem 0 0;
 }
 @media only screen and (max-width: 992px) {
   .features__inner {
@@ -259,7 +276,11 @@ ul a {
   }
 }
 .contact h2 {
+  font-size: clamp(34px, 2vw, 40px);
+  line-height: clamp(42px, 2vw, 48px);
+  font-weight: 700;
   text-align: center;
+  padding: 0 0 2rem;
 }
 .contact .form {
   width: 100%;
