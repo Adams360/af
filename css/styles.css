@@ -96,31 +96,11 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 24px;
 }
 @media only screen and (min-width: 576px) {
   .container {
-    max-width: 540px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-@media only screen and (min-width: 1445px) {
-  .container {
-    max-width: 1533.5px;
+    min-width: 540px;
   }
 }
 
@@ -135,46 +115,35 @@ ul a {
 .hero {
   position: relative;
   z-index: 1;
+  padding: 11px 0;
+  background-color: #00c2ff;
 }
 .hero::after {
   content: "";
+  display: block;
   position: absolute;
-  left: 0;
   bottom: 0;
+  transform: translateY(60%);
   width: 100%;
-  height: 100%;
-  background-image: url(../assets/img/wave.svg);
-  background-size: cover;
+  height: 143px;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(../../assets/img/wave-mobile.svg);
   z-index: -1;
 }
 .hero__logo {
   display: block;
+  width: 100%;
   max-width: 127px;
-  padding: 15px 0;
 }
 .hero__inner {
   display: flex;
-  justify-content: space-between;
   flex-direction: column-reverse;
-  padding: 50px 0 0;
-}
-@media only screen and (min-width: 768px) {
-  .hero__inner {
-    padding: 150px 0 0;
-    flex-direction: row;
-  }
 }
 .hero__content {
   color: #ffffff;
   text-align: center;
-}
-@media only screen and (min-width: 768px) {
-  .hero__content {
-    flex: 0 0 605px;
-    text-align: left;
-  }
 }
 .hero__content h1 {
   font-size: clamp(40px, 3vw, 56px);
@@ -188,33 +157,24 @@ ul a {
   line-height: 34px;
   margin: 0 0 38px;
 }
-.hero__content ul li {
-  display: inline-block;
-}
 .hero__content ul li:first-child {
-  margin: 0 48px 0 0;
+  margin: 0 0 28px;
 }
-@media only screen and (min-width: 768px) {
-  .hero__img {
-    flex: 0 0 728.5px;
-  }
+.hero__img {
+  padding: 43px 0;
 }
 .hero__img img {
   display: block;
   width: 100%;
   height: 100%;
+  max-width: 470px;
+  margin: 0 auto;
   object-fit: contain;
-}
-@media only screen and (min-width: 768px) {
-  .hero__img img {
-    width: 728.5px;
-    height: 540px;
-  }
 }
 
 /* Features */
 .features {
-  padding: 6rem 0;
+  padding: 180px 0 40px;
 }
 .features h2 {
   font-size: clamp(34px, 2vw, 40px);
@@ -224,23 +184,11 @@ ul a {
 }
 .features__inner {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  margin: 4rem 0 0;
-}
-@media only screen and (min-width: 768px) {
-  .features__inner {
-    flex-direction: row;
-  }
 }
 .features__item {
   text-align: center;
-  padding: 0 0 30px;
-}
-@media only screen and (min-width: 768px) {
-  .features__item {
-    padding: 0 25px;
-  }
+  padding: 0 25px;
 }
 .features__item img {
   width: 100px;
@@ -248,7 +196,7 @@ ul a {
   object-fit: contain;
 }
 .features__item figcaption h4 {
-  font-size: 22px;
+  font-size: 24px;
   color: #220d4e;
   line-height: 32px;
   margin: 0 0 25px;
@@ -261,24 +209,23 @@ ul a {
 
 /* Contact */
 .contact {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 .contact h2 {
   font-size: clamp(34px, 2vw, 40px);
   line-height: clamp(42px, 2vw, 48px);
   font-weight: 700;
   text-align: center;
-  padding: 0 0 2rem;
+  margin: 0 0 80px;
 }
 .contact .form {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 4rem;
   background-color: #ffffff;
   border-radius: 8px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 .contact .form__group {
   position: relative;
@@ -307,9 +254,10 @@ ul a {
   border-radius: 8px;
   background-color: #220d4e;
   color: #ffffff;
-  padding: 1rem 2rem;
+  padding: 10px 20px;
   border: 2px solid transparent;
   transition: background-color 0.2s ease-in-out;
+  width: 100%;
 }
 .contact .form__group:last-child input[type=submit]:hover {
   background-color: rgba(34, 13, 78, 0);

@@ -13,26 +13,26 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 22px;
+    padding: 0 24px;
 
-    @include sm {
-        max-width: 540px;
-    }
+    // @include xxl {
+    //     max-width: 1533.5px;
+    // }
 
-    @include md {
-        max-width: 720px;
-    }
+    // @include xl {
+    //     max-width: 1140px;
+    // }
 
-    @include lg {
-        max-width: 960px;
-    }
+    // @include lg {
+    //     max-width: 1140px;
+    // }
 
-    @include xl {
-        max-width: 1140px;
-    }
+    // @include md {
+    //     max-width: 990px;
+    // }
 
-    @include xxl {
-        max-width: 1533.5px;
+    @include sm-up {
+        min-width: 540px;
     }
 }
 
